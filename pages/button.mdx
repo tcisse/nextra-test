@@ -1,0 +1,25 @@
+# Buttons
+
+import { useState } from "react";
+
+export function Counter({ children }) {
+  const [count, setCount] = useState(0);
+  return (
+    <button className="nx-bg-blue-100 nx-py-2 nx-px-2 nx-rounded-lg" onClick={() => setCount(count + 1)}>
+      {children} {count}
+    </button>
+  );
+}
+
+```js copy showLineNumbers
+export function Counter({ children }) {
+  const [count, setCount] = useState(0);
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      {children} {count}
+    </button>
+  );
+}
+```
+
+<Counter>**Clicks:**</Counter>
